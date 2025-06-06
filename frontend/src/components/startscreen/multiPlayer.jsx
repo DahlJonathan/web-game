@@ -361,7 +361,7 @@ const MultiPlayer = ({
           className={`px-4 py-3 font-bold rounded-lg transition ${
             lobbyLeader &&
             lobbyLeader.name === playerName &&
-            players.length >= 2 &&
+            players.length >= 1 &&
             players.every((player) => player.isReady)
               ? "bg-green-500 hover:bg-green-700"
               : "bg-gray-500 cursor-not-allowed"
