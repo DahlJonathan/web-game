@@ -4,6 +4,7 @@ import { WebSocketServer } from 'ws';
 import { PORT } from './config.js';
 import GameState from './gameState.js';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const wss = new WebSocketServer({ noServer: true });
@@ -12,6 +13,12 @@ let gameInterval = null;
 let gameEnded = false;
 let rematchActive = false;
 let onePlayerLeft = false;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static files from the frontend's public directory
+app.use('/images', express.static(path.join(__dirname, '../frontend/public/images')));
 
 app.get('/favicon.ico', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'favicon.ico'));

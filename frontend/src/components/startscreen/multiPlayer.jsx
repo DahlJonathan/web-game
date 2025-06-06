@@ -313,7 +313,7 @@ const MultiPlayer = ({
               } text-white`}
             >
               <img
-                src={`/characters/${character.image}`}
+                src={`/images/${character.image}`}
                 alt={character.name}
                 width={50}
                 height={50}

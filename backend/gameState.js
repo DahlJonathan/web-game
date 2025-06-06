@@ -8,13 +8,12 @@ export default class GameState {
         this.powerSpeed = [];
         this.hasPowerUp = false;
         this.diamonds = [];
-        this.diamondsImage = 'src/images/diamond.png';
-        this.powerSpeedImage = 'src/images/powerspeed.png';
-        this.powerUpImage = 'src/images/powerjump.png';
-        this.collectablesImage = 'src/images/gem.png';
-        this.platformImage = 'src/images/platform.jpg';
-        this.playerImage = 'src/images/1.png';
-        this.playerImage = '/1.png';
+        this.diamondsImage = '/images/diamond.png';
+        this.powerSpeedImage = '/images/powerspeed.png';
+        this.powerUpImage = '/images/powerjump.png';
+        this.collectablesImage = '/images/gem.png';
+        this.platformImage = '/images/platform.jpg';
+        this.playerImage = '/images/1.png';
         this.gameStarted = false;
         this.gameMode = 'Gather'
 
@@ -128,7 +127,7 @@ export default class GameState {
             isJumping: false,
             points: 0,
             characterId: 1, // Default character ID
-            playerImage: 'src/images/1.png', // Default image
+            playerImage: '/images/1.png', // Default image
             jumpStrength: this.jumpStrength, // Default jump strength
             powerUpDuration: 0, // Duration of the power-up effect
             hasPowerUp: false,
@@ -186,7 +185,7 @@ export default class GameState {
     updatePlayerCharacter(playerId, characterId) {
         if (this.players[playerId]) {
             this.players[playerId].characterId = characterId;
-            this.players[playerId].playerImage = `src/images/${characterId}.png`;
+            this.players[playerId].playerImage = `/images/${characterId}.png`;
         }
     }
 

@@ -36,16 +36,16 @@ const HowToPlay = ({ onBack }) => {
         </p>
         <div className="flex justify-center items-center mt-4 space-x-5">
           <div className="flex flex-col items-center">
-            <img src="src/images/gem.png" alt="collectables" />
-            <p>1 point</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src="src/images/diamond.png" alt="collectables" />
+            <img src="/images/diamond.png" alt="collectables" />
             <p>5 points</p>
           </div>
           <div className="flex flex-col items-center">
+            <img src="/images/gem.png" alt="collectables" />
+            <p>1 point</p>
+          </div>
+          <div className="flex flex-col items-center">
             <img
-              src="src/images/powerjump.png"
+              src="/images/powerjump.png"
               alt="collectables"
               style={{ width: "42px", height: "70px" }}
             />
@@ -53,7 +53,7 @@ const HowToPlay = ({ onBack }) => {
           </div>
           <div className="flex flex-col items-center">
             <img
-              src="src/images/powerspeed.png"
+              src="/images/powerspeed.png"
               alt="collectables"
               style={{ width: "42px", height: "70px" }}
             />
@@ -64,7 +64,7 @@ const HowToPlay = ({ onBack }) => {
 
       <div className="flex justify-center mt-2">
         <div className="flex flex-col items-center">
-          <img src="src/images/esc.png" alt="keys" />
+          <img src="/images/esc.png" alt="keys" />
           <p>Pause</p>
         </div>
       </div>
@@ -73,15 +73,15 @@ const HowToPlay = ({ onBack }) => {
         <p className="mb-2">Use the arrow keys to move:</p>
         <div className="flex justify-center space-x-4">
           <div className="flex flex-col items-center">
-            <img src="src/images/left.png" alt="keys" />
+            <img src="/images/left.png" alt="keys" />
             <p>Left</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="src/images/up.png" alt="keys" />
+            <img src="/images/up.png" alt="keys" />
             <p>Jump</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="src/images/right.png" alt="keys" />
+            <img src="/images/right.png" alt="keys" />
             <p>Right</p>
           </div>
         </div>
@@ -90,7 +90,7 @@ const HowToPlay = ({ onBack }) => {
       <div>
         <div className="flex justify-center mt-2">
           <div className="flex flex-col items-center">
-            <img src="src/images/space.png" alt="keys" />
+            <img src="/images/space.png" alt="keys" />
             <p>Push other players near you</p>
           </div>
         </div>
@@ -100,7 +100,7 @@ const HowToPlay = ({ onBack }) => {
         <div className="text-lg text-center max-w-md mt-4 mb-4">
           <p>Long jump</p>
           <div className="flex flex-col items-center">
-            <img src="src/images/longjump.png" alt="longjump" />
+            <img src="/images/longjump.png" alt="longjump" />
           </div>
         </div>
       </div>
