@@ -318,7 +318,6 @@ const MultiPlayer = ({
                 width={50}
                 height={50}
               />
-              {console.log("MultiPlayer character image:", character.image)}
             </button>
           ))}
         </div>

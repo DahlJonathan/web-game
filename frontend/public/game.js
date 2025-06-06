@@ -297,5 +297,14 @@ export default class Game {
 
             gameArea.appendChild(playerEl);
         }
+
+        console.log("platformImage:", this.platformImage);
+        console.log("collectablesImage:", this.collectablesImage);
+        console.log("diamondsImage:", this.diamondsImage);
+        console.log("powerUpImage:", this.powerUpImage);
+        console.log("powerSpeedImage:", this.powerSpeedImage);
+        for (const [id, player] of Object.entries(this.players)) {
+            console.log("playerImage:", player.playerImage, "for player", id);
+        }
     }
 }
