@@ -13,7 +13,10 @@ export default class GameState {
         this.powerUpImage = '/images/powerjump.png';
         this.collectablesImage = '/images/gem.png';
         this.platformImage = '/images/platform.jpg';
-        this.playerImage = '/images/1.png';
+        this.collectablesImage = '/images/gem.png';
+        this.diamondsImage = '/images/diamond.png';
+        this.powerUpImage = '/images/powerjump.png';
+        this.powerSpeedImage = '/images/powerspeed.png';
         this.gameStarted = false;
         this.gameMode = 'Gather'
 
@@ -127,7 +130,7 @@ export default class GameState {
             isJumping: false,
             points: 0,
             characterId: 1, // Default character ID
-            playerImage: '/images/1.png', // Default image
+            playerImage: '/images/1.png', // or whichever is your default
             jumpStrength: this.jumpStrength, // Default jump strength
             powerUpDuration: 0, // Duration of the power-up effect
             hasPowerUp: false,
@@ -537,12 +540,9 @@ export default class GameState {
             gameOver: this.gameOver,
             platformImage: this.platformImage,
             collectablesImage: this.collectablesImage,
-            powerUps: this.powerUps,
-            powerUpImage: this.powerUpImage,
-            powerSpeed: this.powerSpeed,
-            powerSpeedImage: this.powerSpeedImage,
-            diamonds: this.diamonds,
             diamondsImage: this.diamondsImage,
+            powerUpImage: this.powerUpImage,
+            powerSpeedImage: this.powerSpeedImage,
             gameStarted: this.gameStarted,
             gameMode: this.gameMode,
         };
