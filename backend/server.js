@@ -103,7 +103,6 @@ wss.on('connection', (ws) => {
             const player = gameState.players[playerId];
             if (player) {
                 gameState.updatePlayerCharacter(playerId, data.characterId);
-                player.playerImage = `src/images/${data.characterId}.png`;
             }
         }
         if (data.type === "restartRequest") {
