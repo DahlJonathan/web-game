@@ -121,7 +121,6 @@ function App() {
             name: playerData.name || id,
             points: playerData.points,
             character: playerData.playerImage,
-            isIT: playerData.isIT,
           }),
         );
         setPlayers(updatedScoreboard);

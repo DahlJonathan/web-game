@@ -63,7 +63,7 @@ audio.loadSound('gempoint', '/audio/collected.wav');
 audio.loadSound('diapoint', '/audio/collectedBig.wav');
 audio.loadSound('powerup', '/audio/collectedBig.wav');
 
-audio.setVolume('background', 0.02);
+audio.setVolume('background', 0.015);
 audio.setVolume('gempoint', 0.3);
 audio.setVolume('diapoint', 0.3);
 audio.setVolume('jump', 1);

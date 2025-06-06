@@ -1,7 +1,8 @@
 import React from "react";
 
 const Diamonds = ({ x, y, width, height, diamondsImage }) => {
-  console.log("Rendering diamonds at:", { x, y, width, height });
+  // Debug log for diamonds image
+  console.log("Diamonds image:", diamondsImage);
   return (
     <div
       className="diamonds"
