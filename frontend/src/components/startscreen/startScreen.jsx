@@ -1,5 +1,3 @@
-//./frontend/src/components/startscreen/startscreen.jsx
-import React from "react";
 
 const StartScreen = ({ onSinglePlayer, onMultiPlayer, onHowToPlay }) => {
   return (
