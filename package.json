@@ -1,0 +1,27 @@
+{
+  "name": "web-game",
+  "version": "1.0.0",
+  "description": "Real-time multiplayer web game",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "start:backend": "node backend/server.js",
+    "start:frontend": "cd frontend && npm run start",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "express": "^4.21.2",
+    "react-fps": "^1.0.6",
+    "ws": "^8.18.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.8"
+  }
+}
