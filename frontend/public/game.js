@@ -177,8 +177,15 @@ export default class Game {
         document.querySelectorAll(".powerspeed").forEach(el => el.remove());
         document.querySelectorAll(".diamonds").forEach(el => el.remove());
 
+        // Fallbacks for images
+        const platformImage = this.platformImage || "/images/platform.jpg";
+        const collectablesImage = this.collectablesImage || "/images/gem.png";
+        const diamondsImage = this.diamondsImage || "/images/diamond.png";
+        const powerUpImage = this.powerUpImage || "/images/powerjump.png";
+        const powerSpeedImage = this.powerSpeedImage || "/images/powerspeed.png";
+
         // Render platforms
-        if (this.platforms) {
+        if this.platforms) {
             this.platforms.forEach(platform => {
                 let platformEl = document.createElement("div");
                 platformEl.classList.add("platform");
@@ -187,7 +194,7 @@ export default class Game {
                 platformEl.style.top = `${platform.top}px`;
                 platformEl.style.width = `${platform.width}px`;
                 platformEl.style.height = `${platform.height}px`;
-                platformEl.style.backgroundImage = `url(${this.platformImage})`;
+                platformEl.style.backgroundImage = `url(${platformImage})`;
                 platformEl.style.backgroundSize = "cover";
                 gameArea.appendChild(platformEl);
             });
@@ -204,7 +211,7 @@ export default class Game {
                     collectableEl.style.top = `${collectable.y}px`;
                     collectableEl.style.width = `${collectable.width}px`;
                     collectableEl.style.height = `${collectable.height}px`;
-                    collectableEl.style.backgroundImage = `url(${this.collectablesImage})`;
+                    collectableEl.style.backgroundImage = `url(${collectablesImage})`;
                     collectableEl.style.backgroundSize = "contain";
                     collectableEl.style.backgroundPosition = "center";
                     collectableEl.style.backgroundRepeat = "no-repeat";
@@ -224,7 +231,7 @@ export default class Game {
                     diamondEl.style.top = `${diamond.y}px`;
                     diamondEl.style.width = `${diamond.width}px`;
                     diamondEl.style.height = `${diamond.height}px`;
-                    diamondEl.style.backgroundImage = `url(${this.diamondsImage})`;
+                    diamondEl.style.backgroundImage = `url(${diamondsImage})`;
                     diamondEl.style.backgroundSize = "contain";
                     diamondEl.style.backgroundPosition = "center";
                     diamondEl.style.backgroundRepeat = "no-repeat";
@@ -244,7 +251,7 @@ export default class Game {
                     powerUpEl.style.top = `${powerUp.y}px`;
                     powerUpEl.style.width = `${powerUp.width}px`;
                     powerUpEl.style.height = `${powerUp.height}px`;
-                    powerUpEl.style.backgroundImage = `url(${this.powerUpImage})`;
+                    powerUpEl.style.backgroundImage = `url(${powerUpImage})`;
                     powerUpEl.style.backgroundSize = "contain";
                     powerUpEl.style.backgroundPosition = "center";
                     powerUpEl.style.backgroundRepeat = "no-repeat";
@@ -253,7 +260,7 @@ export default class Game {
             });
         }
 
-        // Render powerups
+        // Render power speed
         if (this.powerSpeed) {
             this.powerSpeed.forEach(powerS => {
                 if (!powerS.collected) {
@@ -264,7 +271,7 @@ export default class Game {
                     powerSpeedEl.style.top = `${powerS.y}px`;
                     powerSpeedEl.style.width = `${powerS.width}px`;
                     powerSpeedEl.style.height = `${powerS.height}px`;
-                    powerSpeedEl.style.backgroundImage = `url(${this.powerSpeedImage})`;
+                    powerSpeedEl.style.backgroundImage = `url(${powerSpeedImage})`;
                     powerSpeedEl.style.backgroundSize = "contain";
                     powerSpeedEl.style.backgroundPosition = "center";
                     powerSpeedEl.style.backgroundRepeat = "no-repeat";
@@ -277,16 +284,15 @@ export default class Game {
         // Render each player
         for (const [id, player] of Object.entries(this.players)) {
             let playerEl = document.createElement("div");
-            // Add a generic class plus a unique one
             playerEl.classList.add("player", `player-${id}`);
             playerEl.style.position = "absolute";
             playerEl.style.width = "35px";
             playerEl.style.height = "35px";
-            playerEl.style.backgroundImage = `url(${player.playerImage})`; // Set player image
+            playerEl.style.backgroundImage = `url(${player.playerImage || "/images/1.png"})`; // fallback
             playerEl.style.backgroundSize = "contain";
             playerEl.style.backgroundPosition = "center";
             playerEl.style.backgroundRepeat = "no-repeat";
-            playerEl.style.zIndex = "2"; // Ensure player is in front    
+            playerEl.style.zIndex = "2";
 
             let t = Math.min((now - player.timestamp) / 50, 1);
             let interpolatedX = player.lastX + (player.x - player.lastX) * t;
