@@ -8,10 +8,10 @@ import audio from "../../audio";
 import Mute from "../gameinfo/mute";
 
 const characters = [
-  { id: 1, name: "Character 1", image: "../../../images/1.png" },
-  { id: 2, name: "Character 2", image: "../../../images/2.png" },
-  { id: 3, name: "Character 3", image: "../../../images/3.png" },
-  { id: 4, name: "Character 4", image: "../../../images/4.png" },
+  { id: 1, name: "Character 1", image: "1.png" },
+  { id: 2, name: "Character 2", image: "2.png" },
+  { id: 3, name: "Character 3", image: "3.png" },
+  { id: 4, name: "Character 4", image: "4.png" },
 ];
 
 const MultiPlayer = ({

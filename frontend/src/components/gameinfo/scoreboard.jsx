@@ -8,7 +8,7 @@ function Scoreboard({ players }) {
           <div
             className="w-10 h-10"
             style={{
-              backgroundImage: `url(../../${player.character})`,
+              backgroundImage: `url(${player.character})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
