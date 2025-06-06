@@ -185,7 +185,7 @@ export default class Game {
         const powerSpeedImage = this.powerSpeedImage || "/images/powerspeed.png";
 
         // Render platforms
-        if this.platforms) {
+        if (this.platforms) {
             this.platforms.forEach(platform => {
                 let platformEl = document.createElement("div");
                 platformEl.classList.add("platform");
