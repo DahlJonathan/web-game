@@ -1,7 +1,11 @@
 // frontend/public/websocket.js
 if (!window.__ws) {
+    const wsUrl =
+        window.location.hostname === "localhost"
+            ? "ws://localhost:8080"
+            : "wss://web-game-production-23a6.up.railway.app";
 
-    window.__ws = new WebSocket('ws://localhost:8080'); //ngrok adress here
+    window.__ws = new WebSocket(wsUrl);
 
     window.__ws.onopen = () => {
         console.log('WebSocket connection established');
