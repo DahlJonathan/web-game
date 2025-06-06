@@ -355,7 +355,7 @@ const MultiPlayer = ({
           disabled={
             !lobbyLeader ||
             lobbyLeader.name !== playerName ||
-            players.length < 2 ||
+            players.length < 1 || // Allow starting with 1 player
             !players.every((player) => player.isReady)
           }
           className={`px-4 py-3 font-bold rounded-lg transition ${
