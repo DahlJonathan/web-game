@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Collectable = ({ x, y, width, height, color }) => {
   console.log("Rendering collectable at:", { x, y, width, height, color });

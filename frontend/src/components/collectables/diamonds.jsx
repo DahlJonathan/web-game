@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Diamonds = ({ x, y, width, height, diamondsImage }) => {
   return (
